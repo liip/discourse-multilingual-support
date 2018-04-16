@@ -3,3 +3,11 @@
 # version: 0.1
 # authors: Hugo Torres and David Jeanmonod
 # url: https://github.com/liip/discourse-multilingual-support
+
+after_initialize do
+  [
+    '../lib/single_sign_on.rb',
+    '../app/models/discourse_single_sign_on.rb',
+    '../app/services/anonymous_shadow_creator.rb',
+  ].each { |path| load File.expand_path(path, __FILE__) }
+end

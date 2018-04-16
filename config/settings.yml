@@ -1,0 +1,4 @@
+plugins:
+  sso_overrides_locale:
+    default: true
+    client: false
