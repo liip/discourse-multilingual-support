@@ -43,7 +43,6 @@ describe SessionController do
       expect(logged_on_user.locale).to eq('de')
     end
 
-
     it 'allows you to create an account' do
       sso = get_sso('/a/')
       sso.external_id = '666' # the number of the beast
