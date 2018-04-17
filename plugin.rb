@@ -9,5 +9,6 @@ after_initialize do
     '../lib/single_sign_on.rb',
     '../app/models/discourse_single_sign_on.rb',
     '../app/services/anonymous_shadow_creator.rb',
+    '../app/controllers/application_controller.rb',
   ].each { |path| load File.expand_path(path, __FILE__) }
 end
