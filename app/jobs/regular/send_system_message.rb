@@ -7,12 +7,7 @@ class ::SendSystemMessage
 
     # Fetch the user locale
     user = User.find_by(id: args[:user_id])
-    locale = I18n.locale
-    if user.present? and user.locale.present?
-      locale = user.locale
-    end
-
-    I18n.with_locale(locale) do
+    I18n.with_locale(user&.locale || I18n.locale) do
       old_execute(args)
     end
   end
