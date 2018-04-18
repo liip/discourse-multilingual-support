@@ -1,6 +1,8 @@
 # Discourse multilingual support
 This plugin exist to provide fixes and features to ease the launch of multilingual Discourse instances
 
+[![Build Status](https://travis-ci.org/liip/discourse-multilingual-support.svg?branch=master)](https://travis-ci.org/liip/discourse-multilingual-support)
+
 ## Allow to force the initial local with a query string
 This is useful when you want to provide an access to your forum and you already know the user locale. For example on your main website you have a link to the forum. With the plugin, you are allow to add *?locale=XX* to the url. Ex: [http://forum.example.com?locale=fr](#) will load the forum in French.
 
