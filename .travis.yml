@@ -17,3 +17,7 @@ script:
     -e SINGLE_PLUGIN=$plugin_name
     -v $(pwd):/var/www/discourse/plugins/$plugin_name
     discourse/discourse_test:release
+    
+notifications:
+  email:
+    - tcs-squad+travis-ci@liip.ch
