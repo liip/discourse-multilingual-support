@@ -8,6 +8,7 @@ See the inital discussion on META: https://meta.discourse.org/t/switch-language-
 
 ## Allow to specify the user locale while creting a user account via SSO
 By default, Discourse create all user account with the default locale. But when you already have a user base, and you create them account via SSO, it's nice to recycle their prefered locale. 
+
 Inital discussion on META: https://meta.discourse.org/t/set-language-for-sso-users/78458/5
 
 ## Preserve the user locale while creating an anonymous account
