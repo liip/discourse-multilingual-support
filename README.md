@@ -17,10 +17,11 @@ Inital discussion on META: https://meta.discourse.org/t/set-language-for-sso-use
 ### Preserve the user locale while creating an anonymous account
 This looks more like a bug. But here too, when Discourse create an anonymous account, it will be with the default locale. The plugin fix this and recycle the user locale.
 
-## Planned features
-
 ### Use the appropriate locale for the welcome message
-Currently Discourse always sent the welcome message based on the default locale. The plugin will fix this to use the user locale to deliver an appropriate message
+Currently Discourse always sent the welcome message based on the default locale. The plugin will fix this to use the user locale to deliver an appropriate message.
+
+
+## Planned features
 
 ### Allow to restrict the available locale list
 If you want to do some customisation on the localisation, currently, you have to do it for ALL available locales. With the plugin you will be able to select the available locales, so that you can focus the effort on some locale only.
