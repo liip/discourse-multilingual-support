@@ -8,7 +8,7 @@ after_initialize do
   [
     '../lib/single_sign_on.rb',
     '../app/jobs/regular/send_system_message.rb',
-    '../app/models/locale_site_setting.rb',
+#    '../app/models/locale_site_setting.rb',
     '../app/models/discourse_single_sign_on.rb',
     '../app/services/anonymous_shadow_creator.rb',
     '../app/controllers/application_controller.rb',
