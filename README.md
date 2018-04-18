@@ -32,4 +32,7 @@ Most of the post wont need a localisation. But some of them require it. For exam
 
     <div class="hidden visible-de">TEXT</div>
     
-to allow this.
+The plugin provide:
+
+ * The possibility to create such DIV: See https://meta.discourse.org/t/whitelisting-some-html-tags/24280/25
+ * The new CSS rules to hide/show some parts of a post
