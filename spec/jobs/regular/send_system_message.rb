@@ -14,5 +14,4 @@ describe SendSystemMessage do
       expect(message.title).to include "Bienvenue"
     end
   end
-
 end
