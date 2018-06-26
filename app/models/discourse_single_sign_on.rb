@@ -10,7 +10,6 @@ class ::DiscourseSingleSignOn
     user
   end
 
-
   def match_email_or_create_user(ip_address)
     # Use a mutex here to counter SSO requests that are sent at the same time w
     # the same email payload

@@ -3,7 +3,6 @@ require_dependency 'locale_site_setting'
 class ::LocaleSiteSetting
   singleton_class.send(:alias_method, :old_supported_locales, :supported_locales)
 
-
   def self.supported_locales
     locales = self.old_supported_locales
     # on rake task we want all available language
