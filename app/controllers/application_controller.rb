@@ -19,7 +19,7 @@ class ::ApplicationController
     elsif I18n.locale_available?(SiteSetting.default_locale)
       SiteSetting.default_locale
     else
-      LocaleSiteSetting.values.first
+      LocaleSiteSetting.supported_locales.first
     end
     I18n.ensure_all_loaded!
   end

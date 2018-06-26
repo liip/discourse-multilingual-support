@@ -19,7 +19,7 @@ describe LocaleSiteSetting do
   end
 
   describe 'valid_value?' do
-    skip 'returns true for a locale that we have translations for' do
+    it 'returns true for a locale that we have translations for' do
       expect(LocaleSiteSetting.valid_value?('en')).to eq(false)
       expect(LocaleSiteSetting.valid_value?('fr')).to eq(true)
     end
