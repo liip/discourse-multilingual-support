@@ -8,10 +8,10 @@ describe Jobs::SendSystemMessage do
       french_guy = Fabricate(:user)
       french_guy.locale = 'fr'
       french_guy.save
-
-      message = Jobs::SendSystemMessage.new.execute(user_id: french_guy.id, message_type: 'welcome_user')
-
-      expect(message.topic&.title).to include "Bienvenue"
+      I18n.with_locale('de') do
+        message = Jobs::SendSystemMessage.new.execute(user_id: french_guy.id, message_type: 'welcome_user')
+        expect(message.topic&.title).to include "Bienvenue"
+      end
     end
   end
 end
