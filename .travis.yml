@@ -12,12 +12,15 @@ before_install:
 script:
   - >
     docker run
+    -t
+    -e TRAVIS=$TRAVIS
     -e "COMMIT_HASH=origin/tests-passed"
     -e "SKIP_CORE=1"
+    -e "RUBY_ONLY=1"
     -e SINGLE_PLUGIN=$plugin_name
     -v $(pwd):/var/www/discourse/plugins/$plugin_name
     discourse/discourse_test:release
-    
+
 notifications:
   email:
     - tcs-squad+travis-ci@liip.ch
