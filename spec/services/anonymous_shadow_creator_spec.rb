@@ -11,7 +11,7 @@ describe AnonymousShadowCreator do
   context "Anonymous posting is enabled" do
 
     before { SiteSetting.allow_anonymous_posting = true }
-    let(:user) { Fabricate(:user_single_email, trust_level: 3, locale: 'de') }
+    let(:user) { Fabricate(:user, trust_level: 3, locale: 'de') }
 
     it "returns shadow if setting enable with correct locale" do
       shadow = AnonymousShadowCreator.get(user)
