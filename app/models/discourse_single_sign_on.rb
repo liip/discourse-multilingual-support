@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_dependency 'discourse_single_sign_on'
 class ::DiscourseSingleSignOn
   alias_method :old_lookup_or_create_user, :lookup_or_create_user

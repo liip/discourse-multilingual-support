@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_dependency 'i18n/backend/fallback_locale_list'
 
 class ::FallbackLocaleList

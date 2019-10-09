@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # name: discourse-multilingual-support
 # about: Provide fixes and tools to have a better multilingual support
 # version: 0.5

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_dependency 'locale_site_setting'
 
 class ::LocaleSiteSetting

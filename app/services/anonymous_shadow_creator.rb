@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_dependency 'anonymous_shadow_creator'
 
 class ::AnonymousShadowCreator
