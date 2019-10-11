@@ -8,11 +8,9 @@
 
 after_initialize do
   [
-    '../lib/single_sign_on.rb',
     '../lib/system_message.rb',
     '../lib/i18n/backend/fallback_locale_list.rb',
     '../app/models/locale_site_setting.rb',
-    '../app/models/discourse_single_sign_on.rb',
     '../app/services/anonymous_shadow_creator.rb',
     '../app/controllers/application_controller.rb',
   ].each { |path| load File.expand_path(path, __FILE__) }

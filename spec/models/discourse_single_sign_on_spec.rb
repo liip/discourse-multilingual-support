@@ -10,6 +10,7 @@ describe DiscourseSingleSignOn do
     SiteSetting.sso_url = @sso_url
     SiteSetting.enable_sso = true
     SiteSetting.sso_secret = @sso_secret
+    SiteSetting.allow_user_locale = true
   end
 
   def make_sso
@@ -18,6 +19,7 @@ describe DiscourseSingleSignOn do
     sso.sso_secret = "supersecret"
     sso.email = "some@email.com"
     sso.locale = "fr"
+    sso.locale_force_update = true
     sso
   end
 
@@ -25,7 +27,6 @@ describe DiscourseSingleSignOn do
 
   it "can override name / email / username" do
     admin = Fabricate(:admin)
-    SiteSetting.sso_overrides_locale = true
 
     sso = DiscourseSingleSignOn.new
     sso.username = "bob%the$admin"
@@ -33,6 +34,7 @@ describe DiscourseSingleSignOn do
     sso.email = admin.email
     sso.external_id = "A"
     sso.locale = "de"
+    sso.locale_force_update = true
 
     sso.lookup_or_create_user(ip_address)
 
@@ -50,7 +52,6 @@ describe DiscourseSingleSignOn do
   end
 
   it "can fill in data on way back" do
-    SiteSetting.sso_overrides_locale = true
     sso = make_sso
 
     url, payload = sso.to_url.split("?")

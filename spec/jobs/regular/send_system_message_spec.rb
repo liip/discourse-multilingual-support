@@ -6,6 +6,7 @@ describe Jobs::SendSystemMessage do
 
   describe 'use user locale' do
     it 'use the french locale to send a welcome message to a french user' do
+      Jobs.run_immediately!
 
       french_guy = Fabricate(:user)
       french_guy.locale = 'fr'

@@ -14,6 +14,7 @@ describe SessionController do
       SiteSetting.sso_url = @sso_url
       SiteSetting.enable_sso = true
       SiteSetting.sso_secret = @sso_secret
+      SiteSetting.allow_user_locale = true
       Fabricate(:admin)
     end
 
@@ -34,8 +35,9 @@ describe SessionController do
       user = Fabricate(:user)
       sso.email = user.email
       sso.external_id = 'abc'
-      sso.username = 'sam'
+      sso.username = 'here'
       sso.locale = 'de'
+      sso.locale_force_update = true
 
       get :sso_login, params: Rack::Utils.parse_query(sso.payload)
 
@@ -50,6 +52,7 @@ describe SessionController do
       sso.external_id = '666' # the number of the beast
       sso.email = 'bob@bob.com'
       sso.locale = 'de'
+      sso.locale_force_update = true
 
       events = DiscourseEvent.track_events do
         get :sso_login, params: Rack::Utils.parse_query(sso.payload)
